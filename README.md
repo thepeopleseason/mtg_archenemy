@@ -13,7 +13,7 @@ Instructions
 Options
 -------
 
-Including `?remote=1` on the end of the URL will enable only remote-friendly schemes (e.g. No extra turns, creature stealing/Control magic)
+Including `?remote=1` on the end of the URL will enable only remote-friendly schemes (e.g. No extra turns, control magic)
 
 Installation
 ------------
@@ -21,3 +21,8 @@ Installation
 1. Download all the scheme PNGs from [scryfall](https://scryfall.com/search?q=t%3Ascheme) and store in same directory as the index.html file.
 2. Run the script `rename_scryfall_files.sh` to rename the files to eliminate unicode characters.
 3. If your files are running on a web server, navigate to the appropriate URL in your browser. Otherwise open `index.html` as a file in your browser.
+
+Contact
+-------
+
+Please direct any questions, feature requests, etc. to [@thepeopleseason](https://twitter.com/thepeopleseason) on Twitter.
