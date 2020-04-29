@@ -8,6 +8,10 @@
     position: relative;
     bottom: 40px;
     cursor: pointer;
+    opacity: 0.5;
+  }
+  .ongoingBtn:hover {
+    opacity: 1.0;
   }
   .schemeDiv {
     height: 400px;
@@ -145,6 +149,16 @@ function load(scheme, div = "scheme0") {
 }
 
 function start() {
+  document.addEventListener('keydown', (function(e) {
+    switch(e.which) {
+    case 13:
+      // ENTER: Set a new scheme in motion
+      set();
+      break;
+    }
+  }));
+
+
   init_deck();
   set();
 }
