@@ -6,7 +6,8 @@ For use with Magic the Gathering [Archenemy](https://mtg.gamepedia.com/Archenemy
 Instructions
 ------------
 
-- Navigate to the page from a browser--clicking on any scheme will cause a new scheme to load.
+- Navigate to the page from a browser--clicking on any scheme or hitting `<ENTER>` will set
+  a new non-ongoing scheme in motion.
 - Any ongoing scheme will stay visible until you hit the `Abandon` button on the scheme.
 - If you run out of schemes in your deck, your starting deck will be reshuffled (minus any
   active ongoing schemes).
@@ -14,7 +15,6 @@ Instructions
 Options
 -------
 
-- Hitting `<ENTER>` will set a new non-ongoing scheme in motion.
 - Including `?remote=1` on the end of the URL will enable only remote-friendly schemes
   (e.g. No extra turns, control magic)
 
