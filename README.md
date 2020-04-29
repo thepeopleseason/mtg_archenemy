@@ -14,7 +14,7 @@ Instructions
 Options
 -------
 
-- Hitting <ENTER> will set a new non-ongoing scheme in motion. 
+- Hitting `<ENTER>` will set a new non-ongoing scheme in motion.
 - Including `?remote=1` on the end of the URL will enable only remote-friendly schemes
   (e.g. No extra turns, control magic)
 
