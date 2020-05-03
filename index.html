@@ -17,6 +17,9 @@
     height: 400px;
     width: 280px;
   }
+  .schemeDiv img:hover, .ongoingBtn img:hover {
+    transform: scale(1.5)
+  }
 </style>
 <script type="text/Javascript">
 const schemes = [
@@ -94,11 +97,12 @@ const schemes = [
 
 var deck;
 var oSchemes = [];
-var oSchemeCount = 0;
 const urlParams = new URLSearchParams(window.location.search);
 
 function set() {
   var scheme;
+
+  // reshuffle empty deck
   if (deck.length == 0) {
     init_deck();
     deck = deck.filter(function(sch) {
@@ -148,19 +152,14 @@ function load(scheme, div = "scheme0") {
   }
 }
 
-function start() {
-  document.addEventListener('keydown', (function(e) {
-    switch(e.which) {
-    case 13:
-      // ENTER: Set a new scheme in motion
-      set();
-      break;
+function preloader() {
+  if (document.images) {
+    for (let i in schemes) {
+      var img = new Image();
+      img.src = `images/${ schemes[i].name }`;
+      images[i] = img;
     }
-  }));
-
-
-  init_deck();
-  set();
+  }
 }
 
 function init_deck() {
@@ -181,9 +180,23 @@ function init_deck() {
     deck[j] = temp;
   }
 }
+
+function start() {
+  document.addEventListener('keydown', (function(e) {
+    switch(e.which) {
+    case 13:
+      // ENTER: Set a new scheme in motion
+      set();
+      break;
+    }
+  }));
+
+  init_deck();
+  set();
+}
 </script>
 
-<body style="text-align: center; overflow: auto;" onload="start();">
+<body style="text-align: center; overflow: auto; margin: 80px 90px 80px; " onload="start();">
 <div class="schemeDiv" id="scheme0" style="float: left;"></div>
 <div class="schemeDiv" id="scheme1" style="float: left;"></div>
 <div class="schemeDiv" id="scheme2" style="float: left;"></div>
