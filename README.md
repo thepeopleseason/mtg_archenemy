@@ -22,6 +22,10 @@ Installation
 3. If your files are running on a web server, navigate to the appropriate URL in your browser.
    Otherwise open `index.html` as a file in your browser.
 
+TODO
+----
+* TODO: Implement localStorage to remember the schemes previously played
+
 Contact
 -------
 
