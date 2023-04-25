@@ -23,76 +23,76 @@
 </style>
 <script type="text/Javascript">
 const schemes = [
-  { name: "oarc-10-every-hope-shall-vanish.png", },
-  { name: "oarc-11-every-last-vestige-shall-rot.png", },
-  { name: "oarc-12-evil-comes-to-fruition.png", },
-  { name: "oarc-13-the-fate-of-the-flammable.png", },
-  { name: "oarc-14-feed-the-machine.png", },
-  { name: "oarc-15-i-bask-in-your-silent-awe.png", ongoing: true, },
-  { name: "oarc-16-i-call-on-the-ancient-magics.png", },
-  { name: "oarc-17-i-delight-in-your-convulsions.png", },
-  { name: "oarc-18-i-know-all-i-see-all.png", ongoing: true, },
-  { name: "oarc-19-ignite-the-cloneforge.png", remote: false, },
-  { name: "oarc-1-all-in-good-time.png", remote: false, },
-  { name: "oarc-20-into-the-earthen-maw.png", },
-  { name: "oarc-21-introductions-are-in-order.png", },
-  { name: "oarc-22-the-iron-guardian-stirs.png", },
-  { name: "oarc-23-know-naught-but-fire.png", },
-  { name: "oarc-24-look-skyward-and-despair.png", },
-  { name: "oarc-25-may-civilization-collapse.png", },
-  { name: "oarc-26-mortal-flesh-is-weak.png", },
-  { name: "oarc-27-my-crushing-masterstroke.png", remote: false, },
-  { name: "oarc-28-my-genius-knows-no-bounds.png", },
-  { name: "oarc-29-my-undead-horde-awakens.png", remote: false, ongoing: true, },
-  { name: "oarc-2-all-shall-smolder-in-my-wake.png", },
-  { name: "oarc-30-my-wish-is-your-command.png", remote: false, },
-  { name: "oarc-31-nature-demands-an-offering.png", },
-  { name: "oarc-32-nature-shields-its-own.png", ongoing: true, },
-  { name: "oarc-33-nothing-can-stop-me-now.png", ongoing: true, },
-  { name: "oarc-34-only-blood-ends-your-nightmares.png", },
-  { name: "oarc-35-the-pieces-are-coming-together.png", },
-  { name: "oarc-36-realms-befitting-my-majesty.png", },
-  { name: "oarc-37-roots-of-all-evil.png", },
-  { name: "oarc-38-rotted-ones-lay-siege.png", },
-  { name: "oarc-39-surrender-your-thoughts.png", },
-  { name: "oarc-3-approach-my-molten-realm.png", },
-  { name: "oarc-40-tooth-claw-and-tail.png", },
-  { name: "oarc-41-the-very-soil-shall-shake.png", ongoing: true, },
-  { name: "oarc-42-which-of-you-burns-brightest.png", },
-  { name: "oarc-43-your-fate-is-thrice-sealed.png", },
-  { name: "oarc-44-your-puny-minds-cannot-fathom.png", },
-  { name: "oarc-45-your-will-is-not-your-own.png", remote: false, },
-  { name: "oarc-4-behold-the-power-of-destruction.png", },
-  { name: "oarc-5-choose-your-champion.png", },
-  { name: "oarc-6-dance-pathetic-marionette.png", remote: false, },
-  { name: "oarc-7-the-dead-shall-serve.png", remote: false },
-  { name: "oarc-8-a-display-of-my-dark-power.png", },
-  { name: "oarc-9-embrace-my-diabolical-vision.png", },
-  { name: "oe01-10-the-mighty-will-fall.png", },
-  { name: "oe01-11-my-forces-are-innumerable.png", ongoing: true, },
-  { name: "oe01-12-my-laughter-echoes.png", ongoing: true, },
-  { name: "oe01-13-no-one-will-hear-your-cries.png", },
-  { name: "oe01-14-pay-tribute-to-me.png", },
-  { name: "oe01-15-power-without-equal.png", },
-  { name: "oe01-16-a-reckoning-approaches.png", },
-  { name: "oe01-17-there-is-no-refuge.png", },
-  { name: "oe01-18-this-world-belongs-to-me.png", },
-  { name: "oe01-19-what-s-yours-is-now-mine.png", remote: false, },
-  { name: "oe01-1-because-i-have-willed-it.png", ongoing: true, },
-  { name: "oe01-20-when-will-you-learn.png", remote: false, },
-  { name: "oe01-2-behold-my-grandeur.png", remote: false, },
-  { name: "oe01-3-bow-to-my-command.png", ongoing: true, },
-  { name: "oe01-4-choose-your-demise.png", },
-  { name: "oe01-5-delight-in-the-hunt.png", },
-  { name: "oe01-6-every-dream-a-nightmare.png", },
-  { name: "oe01-7-for-each-of-you-a-gift.png", },
-  { name: "oe01-8-know-evil.png", },
-  { name: "oe01-9-make-yourself-useful.png", },
-  { name: "parc-54-plots-that-span-centuries.png", remote: false, },
-  { name: "parc-55-perhaps-you-ve-met-my-cohort.png", },
-  { name: "parc-56-your-inescapable-doom.png", ongoing: true, },
-  { name: "parc-57-drench-the-soil-in-their-blood.png", },
-  { name: "parc-58-imprison-this-insolent-wretch.png", ongoing: true, },
+  { name: "oarc-1-all-in-good-time.png", title: "All in Good Time", remote: false, },
+  { name: "oarc-2-all-shall-smolder-in-my-wake.png", title: "All Shall Smolder in My Wake", },
+  { name: "oarc-3-approach-my-molten-realm.png", title: "Approach My Molten Realm", },
+  { name: "oarc-4-behold-the-power-of-destruction.png", title: "Behold the Power of Destruction", },
+  { name: "oarc-5-choose-your-champion.png", title: "Choose Your Champion",},
+  { name: "oarc-6-dance-pathetic-marionette.png", title: "Dance, Pathetic Marionette", remote: false, },
+  { name: "oarc-7-the-dead-shall-serve.png", title: "The Dead Shall Serve", remote: false },
+  { name: "oarc-8-a-display-of-my-dark-power.png", title: "A Display of My Dark Power", },
+  { name: "oarc-9-embrace-my-diabolical-vision.png", title: "Embrace My Diabolical Vision", },
+  { name: "oarc-10-every-hope-shall-vanish.png", title: "Every Hope Shall Vanish", },
+  { name: "oarc-11-every-last-vestige-shall-rot.png", title: "Every Last Vestige Shall Rot", },
+  { name: "oarc-12-evil-comes-to-fruition.png", title: "Evil Comes to Fruition", },
+  { name: "oarc-13-the-fate-of-the-flammable.png", title: "The Fate of the Flammable", },
+  { name: "oarc-14-feed-the-machine.png", title: "Feed the Machine", },
+  { name: "oarc-15-i-bask-in-your-silent-awe.png", title: "I Bask in Your Silent Awe", ongoing: true, },
+  { name: "oarc-16-i-call-on-the-ancient-magics.png", title: "I Call on the Ancient Magics", },
+  { name: "oarc-17-i-delight-in-your-convulsions.png", title: "I Delight in Your Convulsions", },
+  { name: "oarc-18-i-know-all-i-see-all.png", title: "I Know All, I See All", ongoing: true, },
+  { name: "oarc-19-ignite-the-cloneforge.png", title: "Ignite the Cloneforge!", remote: false, },
+  { name: "oarc-20-into-the-earthen-maw.png", title: "Into the Earthen Maw", },
+  { name: "oarc-21-introductions-are-in-order.png", title: "Introductions Are in Order", },
+  { name: "oarc-22-the-iron-guardian-stirs.png", title: "The Iron Guardian Stirs", },
+  { name: "oarc-23-know-naught-but-fire.png", title: "Know Naught but Fire", },
+  { name: "oarc-24-look-skyward-and-despair.png", title: "Look Skyward and Despair", },
+  { name: "oarc-25-may-civilization-collapse.png", title: "May Civilization Collapse", },
+  { name: "oarc-26-mortal-flesh-is-weak.png", title: "Mortal Flesh Is Weak", },
+  { name: "oarc-27-my-crushing-masterstroke.png", title: "My Crushing Masterstroke", remote: false, },
+  { name: "oarc-28-my-genius-knows-no-bounds.png", title: "My Genius Knows No Bounds", },
+  { name: "oarc-29-my-undead-horde-awakens.png", title: "My Undead Horde Awakens", remote: false, ongoing: true, },
+  { name: "oarc-30-my-wish-is-your-command.png", title: "My Wish Is Your Command", remote: false, },
+  { name: "oarc-31-nature-demands-an-offering.png", title: "Nature Demands an Offering", },
+  { name: "oarc-32-nature-shields-its-own.png", title: "Nature Shields Its Own", ongoing: true, },
+  { name: "oarc-33-nothing-can-stop-me-now.png", title: "Nothing Can Stop Me Now", ongoing: true, },
+  { name: "oarc-34-only-blood-ends-your-nightmares.png", title: "Only Blood Ends Your Nightmares", },
+  { name: "oarc-35-the-pieces-are-coming-together.png", title: "The Pieces Are Coming Together", },
+  { name: "oarc-36-realms-befitting-my-majesty.png", title: "Realms Befitting My Majesty", },
+  { name: "oarc-37-roots-of-all-evil.png", title: "Roots of All Evil", },
+  { name: "oarc-38-rotted-ones-lay-siege.png", title: "Rotted Ones, Lay Siege", },
+  { name: "oarc-39-surrender-your-thoughts.png", title: "Surrender Your Thoughts", },
+  { name: "oarc-40-tooth-claw-and-tail.png", title: "Tooth, Claw, and Tail", },
+  { name: "oarc-41-the-very-soil-shall-shake.png", title: "The Very Soil Shall Shake", ongoing: true, },
+  { name: "oarc-42-which-of-you-burns-brightest.png", title: "Which of You Burns Brightest?", },
+  { name: "oarc-43-your-fate-is-thrice-sealed.png", title: "Your Fate Is Thrice Sealed", },
+  { name: "oarc-44-your-puny-minds-cannot-fathom.png", title: "Your Puny Minds Cannot Fathom", },
+  { name: "oarc-45-your-will-is-not-your-own.png", title: "Your Will Is Not Your Own", remote: false, },
+  { name: "oe01-1-because-i-have-willed-it.png", title: "Because I Have Willed It", ongoing: true, },
+  { name: "oe01-2-behold-my-grandeur.png", title: "Behold My Grandeur", remote: false, },
+  { name: "oe01-3-bow-to-my-command.png", title: "Bow to My Command", ongoing: true, },
+  { name: "oe01-4-choose-your-demise.png", title: "Choose Your Demise", },
+  { name: "oe01-5-delight-in-the-hunt.png", title: "Delight in the Hunt", },
+  { name: "oe01-6-every-dream-a-nightmare.png", title: "Every Dream a Nightmare", },
+  { name: "oe01-7-for-each-of-you-a-gift.png", title: "For Each of You, a Gift", },
+  { name: "oe01-8-know-evil.png", title: "Know Evil", },
+  { name: "oe01-9-make-yourself-useful.png", title: "Make Yourself Useful", },
+  { name: "oe01-10-the-mighty-will-fall.png", title: "The Mighty Will Fall", },
+  { name: "oe01-11-my-forces-are-innumerable.png", title: "My Forces Are Innumerable", ongoing: true, },
+  { name: "oe01-12-my-laughter-echoes.png", title: "My Laughter Echoes", ongoing: true, },
+  { name: "oe01-13-no-one-will-hear-your-cries.png", title: "No One Will Hear Your Cries", },
+  { name: "oe01-14-pay-tribute-to-me.png", title: "Pay Tribute to Me", },
+  { name: "oe01-15-power-without-equal.png", title: "Power Without Equal", },
+  { name: "oe01-16-a-reckoning-approaches.png", title: "A Reckoning Approaches", },
+  { name: "oe01-17-there-is-no-refuge.png", title: "There Is No Refuge", },
+  { name: "oe01-18-this-world-belongs-to-me.png", title: "This World Belongs to Me", },
+  { name: "oe01-19-what-s-yours-is-now-mine.png", title: "What's Yours Is Now Mine", remote: false, },
+  { name: "oe01-20-when-will-you-learn.png", title: "When Will You Learn?", remote: false, },
+  { name: "parc-54-plots-that-span-centuries.png", title: "Plots That Span Centuries", remote: false, },
+  { name: "parc-55-perhaps-you-ve-met-my-cohort.png", title: "Perhaps You've Met My Cohort?", },
+  { name: "parc-56-your-inescapable-doom.png", title: "Your Inescapable Doom", ongoing: true, },
+  { name: "parc-57-drench-the-soil-in-their-blood.png", title: "Drench the Soil in Their Blood", },
+  { name: "parc-58-imprison-this-insolent-wretch.png", title: "Imprison This Insolent Wretch", ongoing: true, },
 ];
 
 var deck;
@@ -162,15 +162,26 @@ function preloader() {
   }
 }
 
+function generate_chooser() {
+  let output = '<form name="chooser_form" id="chooser_form">';
+  output += '<input type="checkbox" name="select" onclick="select_toggle()" checked><em>Select All/None</em><br />'
+  sorted_schemes = schemes.sort((a, b) => (a.title < b.title) ? -1 : (a.title > b.title) ? 1 : 0)
+  for (sch in sorted_schemes) {
+    output += `<input type="checkbox" name="chooser" value="${ sorted_schemes[sch].name }" checked>`;
+    output += `<a onmouseover="preview('${ sorted_schemes[sch].name }');">${ sorted_schemes[sch].title }</a><br />`;
+  }
+  output += '</form>';
+  document.getElementById('chooser').innerHTML = output;
+}
+
 function init_deck() {
-  deck = Array.from(schemes.filter(function(sch){
-    if (urlParams.get('remote')) {
-      return sch.remote == false? null : sch;
+  checked = []
+  for (i in document.chooser_form.chooser) {
+    if (document.chooser_form.chooser[i].checked) {
+      checked.push(document.chooser_form.chooser[i].value);
     }
-    else {
-      return sch;
-    }
-  }));
+  }
+  deck = Array.from(schemes.filter(i => checked.includes(i.name)));
 
   // shuffle the deck
   for (let i=deck.length-1; i>0; i--) {
@@ -179,6 +190,24 @@ function init_deck() {
     deck[i] = deck[j];
     deck[j] = temp;
   }
+}
+
+function init_game() {
+  init_deck();
+  document.getElementById('start').style.display = "none";
+  document.getElementById('preview').style.display = "none";
+  document.getElementById('chooser').style.display = "none";
+  document.getElementById('game').style.display = "block";
+  set();
+}
+
+function select_toggle() {
+  document.chooser_form.chooser.forEach(i =>
+    i.checked = document.chooser_form.select.checked);
+}
+
+function preview(sch) {
+  document.getElementById('preview').innerHTML = `<img src="${ sch }" width="500">`;
 }
 
 function start() {
@@ -190,13 +219,20 @@ function start() {
       break;
     }
   }));
-
-  init_deck();
-  set();
+  generate_chooser();
 }
 </script>
 
 <body style="text-align: center; overflow: auto; margin: 80px 90px 80px; " onload="start();">
+
+<div id="start" style="top: 25; position: fixed;">
+<input type="button" value="Start Archenemy!" id="start_button"
+   onclick="init_game();" class="myButton">
+</div>
+<div id="preview" style="top: 100; position: fixed;"><img src="card-back-archenemy.jpg" width="500"></div>
+<div id="chooser" style="margin-left: 525; text-align: left;"></div>
+
+<div id="game" style="display: none;">
 <div class="schemeDiv" id="scheme0" style="float: left;"></div>
 <div class="schemeDiv" id="scheme1" style="float: left;"></div>
 <div class="schemeDiv" id="scheme2" style="float: left;"></div>
@@ -210,5 +246,6 @@ function start() {
 <div class="schemeDiv" id="scheme10" style="float: left;"></div>
 <div class="schemeDiv" id="scheme11" style="float: left;"></div>
 <div class="schemeDiv" id="scheme12" style="float: left;"></div>
+</div>
 </body>
 </html>
