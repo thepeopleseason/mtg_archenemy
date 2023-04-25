@@ -156,7 +156,7 @@ function preloader() {
   if (document.images) {
     for (let i in schemes) {
       var img = new Image();
-      img.src = `images/${ schemes[i].name }`;
+      img.src = `${ schemes[i].name }`;
       images[i] = img;
     }
   }
@@ -220,6 +220,7 @@ function start() {
     }
   }));
   generate_chooser();
+  preloader();
 }
 </script>
 
