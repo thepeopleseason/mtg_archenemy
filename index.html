@@ -18,7 +18,7 @@
     width: 280px;
   }
   .schemeDiv img:hover, .ongoingBtn img:hover {
-    transform: scale(1.5)
+    transform: scale(1.5) translateY(20px);
   }
 </style>
 <script type="text/Javascript">
@@ -116,6 +116,7 @@ function set() {
   }
   else {
     oSchemes.push(scheme);
+    unload();
     redraw();
   }
 }
@@ -150,6 +151,10 @@ function load(scheme, div = "scheme0") {
   if (!scheme.ongoing) {
     document.getElementById(div + 'Btn').style.display = "none";
   }
+}
+
+function unload() {
+  document.getElementById('scheme0').innerHTML = '';
 }
 
 function preloader() {
