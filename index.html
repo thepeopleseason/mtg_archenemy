@@ -162,17 +162,18 @@ function preloader() {
     for (let i in schemes) {
       var img = new Image();
       img.src = `${ schemes[i].name }`;
-      images[i] = img;
     }
   }
 }
 
 function generate_chooser() {
   let output = '<form name="chooser_form" id="chooser_form">';
+  saved_schemes = JSON.parse(localStorage.getItem('aeSchemes'));
   output += '<input type="checkbox" name="select" onclick="select_toggle()" checked><em>Select All/None</em><br />'
   sorted_schemes = schemes.sort((a, b) => (a.title < b.title) ? -1 : (a.title > b.title) ? 1 : 0)
   for (sch in sorted_schemes) {
-    output += `<input type="checkbox" name="chooser" value="${ sorted_schemes[sch].name }" checked>`;
+    let checked = saved_schemes.includes(sorted_schemes[sch].name) ? 'checked' : '';
+    output += `<input type="checkbox" name="chooser" value="${ sorted_schemes[sch].name }" ${checked}>`;
     output += `<a onmouseover="preview('${ sorted_schemes[sch].name }');">${ sorted_schemes[sch].title }</a><br />`;
   }
   output += '</form>';
@@ -187,6 +188,7 @@ function init_deck() {
     }
   }
   deck = Array.from(schemes.filter(i => checked.includes(i.name)));
+  localStorage.setItem('aeSchemes', JSON.stringify(deck.map(x => x.name)));
 
   // shuffle the deck
   for (let i=deck.length-1; i>0; i--) {
