@@ -173,7 +173,7 @@ function generate_chooser() {
   let scheck = '';
   if (saved_schemes) {
     if (saved_schemes.length == schemes.length) {
-      scheck = 'checked'
+      scheck = 'checked';
     }
   } else {
     scheck = 'checked';
@@ -209,13 +209,17 @@ function init_deck() {
 }
 
 async function init_game() {
-  screenLock = await getScreenLock();
-  init_deck();
-  document.getElementById('start').style.display = "none";
-  document.getElementById('preview').style.display = "none";
-  document.getElementById('chooser').style.display = "none";
-  document.getElementById('game').style.display = "block";
-  set();
+  let count = 0;
+  document.chooser_form.chooser.forEach(sch => sch.checked ? count++ : 0);
+  if (count >= 20 || confirm("Archenemy scheme decks should contain at least 20 cards. I mean, you're the evil overlord, so I guess you can do what you want. Are you sure you wish to continue?")) {
+    screenLock = await getScreenLock();
+    init_deck();
+    document.getElementById('start').style.display = "none";
+    document.getElementById('preview').style.display = "none";
+    document.getElementById('chooser').style.display = "none";
+    document.getElementById('game').style.display = "block";
+    set();
+  }
 }
 
 async function getScreenLock() {
