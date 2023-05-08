@@ -168,9 +168,9 @@ function preloader() {
 }
 
 function generate_chooser() {
-  let output = '<form name="chooser_form" id="chooser_form">';
+  let output = '<h1>Choose your schemes:</h1><form name="chooser_form" id="chooser_form">';
   saved_schemes = JSON.parse(localStorage.getItem('aeSchemes'));
-  output += '<input type="checkbox" name="select" onclick="select_toggle()" checked><em>Select All/None</em><br />'
+  output += `<input type="checkbox" name="select" onclick="select_toggle()" ${ saved_schemes && saved_schemes.length == 70 ? 'checked' : '' }><em>Select All/None</em><br />`
   sorted_schemes = schemes.sort((a, b) => (a.title < b.title) ? -1 : (a.title > b.title) ? 1 : 0)
   for (sch in sorted_schemes) {
     let checked = saved_schemes && saved_schemes.includes(sorted_schemes[sch].name) ? 'checked' : '';
@@ -238,7 +238,7 @@ function select_toggle() {
 }
 
 function preview(sch) {
-  document.getElementById('preview').innerHTML = `<img src="${ sch }" width="500">`;
+  document.getElementById('preview').innerHTML = `<img src="${ sch }" style="width: 45vw">`;
 }
 
 function start() {
@@ -261,8 +261,8 @@ function start() {
 <input type="button" value="Start Archenemy!" id="start_button"
    onclick="init_game();" class="myButton">
 </div>
-<div id="preview" style="top: 100; position: fixed;"><img src="card-back-archenemy.jpg" width="500"></div>
-<div id="chooser" style="margin-left: 525; text-align: left;"></div>
+<div id="preview" style="top: 100; position: fixed;"><img src="card-back-archenemy.jpg" style="width: 45vw"></div>
+<div id="chooser" style="margin-left: 50vw; text-align: left;"></div>
 
 <div id="game" style="display: none;">
 <div class="schemeDiv" id="scheme0" style="float: left;"></div>
