@@ -96,6 +96,7 @@ const schemes = [
 ];
 
 var deck;
+var current;
 var screenLock;
 var oSchemes = [];
 const urlParams = new URLSearchParams(window.location.search);
@@ -103,20 +104,16 @@ const urlParams = new URLSearchParams(window.location.search);
 function set() {
   var scheme;
 
-  // reshuffle empty deck
-  if (deck.length == 0) {
-    init_deck();
-    deck = deck.filter(function(sch) {
-      return !oSchemes.includes(sch);
-    });
+  if (current && !current.ongoing) {
+    deck.push(current); // put it on the bottom
   }
 
-  scheme = deck.shift();
-  if (!scheme.ongoing) {
-    load(scheme);
+  current = deck.shift(); // load new current
+  if (!current.ongoing) {
+    load(current);
   }
   else {
-    oSchemes.push(scheme);
+    oSchemes.push(current);
     unload();
     redraw();
   }
@@ -124,7 +121,13 @@ function set() {
 
 function clearScheme(schemeName) {
   oSchemes = oSchemes.filter(function(sch) {
-    return sch.name == schemeName ? null : sch;
+    if (sch.name == schemeName) {
+      deck.push(sch); // put it on the bottom
+      return null;
+    }
+    else {
+      return sch;
+    }
   });
   redraw();
 }
