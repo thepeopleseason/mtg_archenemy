@@ -170,10 +170,18 @@ function preloader() {
 function generate_chooser() {
   let output = '<h1>Choose your schemes:</h1><form name="chooser_form" id="chooser_form">';
   saved_schemes = JSON.parse(localStorage.getItem('aeSchemes'));
-  output += `<input type="checkbox" name="select" onclick="select_toggle()" ${ saved_schemes && saved_schemes.length == 70 ? 'checked' : '' }><em>Select All/None</em><br />`
+  let scheck = '';
+  if (saved_schemes) {
+    if (saved_schemes.length == schemes.length) {
+      scheck = 'checked'
+    }
+  } else {
+    scheck = 'checked';
+  }
+  output += `<input type="checkbox" name="select" onclick="select_toggle()" ${ scheck }><em>Select All/None</em><br />`
   sorted_schemes = schemes.sort((a, b) => (a.title < b.title) ? -1 : (a.title > b.title) ? 1 : 0)
   for (sch in sorted_schemes) {
-    let checked = saved_schemes && saved_schemes.includes(sorted_schemes[sch].name) ? 'checked' : '';
+    let checked = scheck || saved_schemes.includes(sorted_schemes[sch].name) ? 'checked' : '';
     output += `<input type="checkbox" name="chooser" value="${ sorted_schemes[sch].name }" ${checked}>`;
     output += `<a onmouseover="preview('${ sorted_schemes[sch].name }');">${ sorted_schemes[sch].title }</a><br />`;
   }
