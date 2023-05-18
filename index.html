@@ -181,12 +181,12 @@ function generate_chooser() {
   } else {
     scheck = 'checked';
   }
-  output += `<input type="checkbox" name="select" onclick="select_toggle()" ${ scheck }><em>Select All/None</em><br />`
+  output += `<input id="selectall" type="checkbox" name="select" onclick="select_toggle()" ${ scheck }><em><label for="selectall">Select All/None</label></em><br />`
   sorted_schemes = schemes.sort((a, b) => (a.title < b.title) ? -1 : (a.title > b.title) ? 1 : 0)
   for (sch in sorted_schemes) {
     let checked = scheck || saved_schemes.includes(sorted_schemes[sch].name) ? 'checked' : '';
-    output += `<input type="checkbox" name="chooser" value="${ sorted_schemes[sch].name }" ${checked}>`;
-    output += `<a onmouseover="preview('${ sorted_schemes[sch].name }');">${ sorted_schemes[sch].title }</a><br />`;
+    output += `<input id="${ sorted_schemes[sch].name }" type="checkbox" name="chooser" value="${ sorted_schemes[sch].name }" ${checked}>`;
+    output += `<a onmouseover="preview('${ sorted_schemes[sch].name }');"><label for="${ sorted_schemes[sch].name }">${ sorted_schemes[sch].title }</label></a><br />`;
   }
   output += '</form>';
   document.getElementById('chooser').innerHTML = output;
