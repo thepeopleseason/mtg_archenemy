@@ -173,6 +173,10 @@ function clearScheme(schemeName) {
 }
 
 function redraw() {
+  if (oSchemes.length == 0) {
+    document.getElementById("scheme0").innerHTML =
+      '<div id="scheme0Btn" class="ongoingBtn"><input type="button" value="Set a new scheme in motion" onclick="set()"></div>';
+  }
   for (let i=0; i<21; i++) {
     if (i >= oSchemes.length) {
       var mydiv = document.getElementById("scheme" + (i+1));
