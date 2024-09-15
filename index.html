@@ -125,7 +125,7 @@ const schemes = [
   { name: "dsc-357-time-bends-to-my-will.png", title: "Time Bends to My Will", },
   { name: "dsc-358-when-will-you-learn.png", title: "When Will You Learn? (DSC)", },
   { name: "dsc-359-you-are-unworthy-of-mercy.png", title: "You Are Unworthy of Mercy", },
-  { name: "dsc-360-you-cannot-hide-from-me.png", title: "You Cannot Hide from Me" },
+  { name: "dsc-360-you-cannot-hide-from-me.png", title: "You Cannot Hide from Me", ongoing: true },
   { name: "dsc-361-you-exist-only-to-amuse.png", title: "You Exist Only to Amuse" },
   { name: "dsc-362-you-live-only-because-i-will-it.png", title: "You Live Only Because I Will It" },
   { name: "dsc-363-you-will-know-true-suffering.png", title: "You Will Know True Suffering" },
@@ -173,7 +173,7 @@ function clearScheme(schemeName) {
 }
 
 function redraw() {
-  for (let i=0; i<12; i++) {
+  for (let i=0; i<21; i++) {
     if (i >= oSchemes.length) {
       var mydiv = document.getElementById("scheme" + (i+1));
       while(mydiv.firstChild) {
@@ -333,6 +333,16 @@ function start() {
 <div class="schemeDiv" id="scheme10" style="float: left;"></div>
 <div class="schemeDiv" id="scheme11" style="float: left;"></div>
 <div class="schemeDiv" id="scheme12" style="float: left;"></div>
+<div class="schemeDiv" id="scheme13" style="float: left;"></div>
+<div class="schemeDiv" id="scheme14" style="float: left;"></div>
+<div class="schemeDiv" id="scheme15" style="float: left;"></div>
+<div class="schemeDiv" id="scheme16" style="float: left;"></div>
+<div class="schemeDiv" id="scheme17" style="float: left;"></div>
+<div class="schemeDiv" id="scheme18" style="float: left;"></div>
+<div class="schemeDiv" id="scheme19" style="float: left;"></div>
+<div class="schemeDiv" id="scheme20" style="float: left;"></div>
+<div class="schemeDiv" id="scheme21" style="float: left;"></div>
+<div class="schemeDiv" id="scheme22" style="float: left;"></div>
 </div>
 
 <div class="footer" style="position: fixed; text-align: center;
